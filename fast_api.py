@@ -82,6 +82,11 @@ def startup_scheduled_remove():
 
 app.add_event_handler("startup", startup_scheduled_remove)
 
+# Endpoint for render.com health check.
+@app.get("/")
+def root():
+    return {"status": "ok"}
+
 @app.post("/config/set_expiration", include_in_schema=False)
 def set_expiration(days: int, access_token: str):
     if access_token != os.getenv("ADMIN_TOKEN"):
