@@ -126,7 +126,7 @@ def create_short_link(link_data: ShortenRequest, email: str = "", password: str 
     db.add(link)
     db.commit()
     db.refresh(link)
-    return {"short_url": f"http://{LOCAL_DOMAIN}/links/{link.short_code}", "short_code": short_code}
+    return {"short_url": f"https://{LOCAL_DOMAIN}/links/{link.short_code}", "short_code": short_code}
 
 @app.get("/links/search")
 def search_by_original_url(url: str):
