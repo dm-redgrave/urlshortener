@@ -293,6 +293,8 @@ POST /config/set_expiration?days=15&access_token=your_admin_token
 
 ![image](https://github.com/user-attachments/assets/f82877b6-2c88-4870-9266-af1d9a083e91)
 
+__Ссылка на сервис:__ https://urlshortener-aeov.onrender.com/
+
 ## Структура базы данных (SQLite)
 
 ### Таблица `users`
