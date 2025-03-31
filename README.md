@@ -260,6 +260,39 @@ POST /config/set_expiration?days=15&access_token=your_admin_token
 
 ---
 
+## Инструкция по запуску
+
+Для деплоя нашего сервиса воспользуемся облачной платформой render.com.
+
+1. Проходим процесс регистрации.
+2. Создаём приложение типа веб-сервис (Add New -> Web Service):
+
+![image](https://github.com/user-attachments/assets/b232106e-7efe-4ec3-a20e-69b921990f85)
+
+3. Указываем ссылку на репозиторий и нажимаем Connect:
+
+![image](https://github.com/user-attachments/assets/0807aaa7-0783-47c8-bd4c-071b939fc518)
+
+4. Устанавливаем имя сервиса:
+
+![image](https://github.com/user-attachments/assets/62b8f8c9-3e32-452b-b55f-e7937d795f9a)
+
+5. Выбираем тарифный план:
+
+![image](https://github.com/user-attachments/assets/68ba8359-64c1-4197-b21b-46586f16d8b5)
+
+6. Так же потребуется указать 2 переменные среды окружения (для доступа к закрытому endpoint и для формирования ссылок):
+
+![image](https://github.com/user-attachments/assets/f132d101-5142-476a-945d-0f109b5b9a8b)
+
+7. Нажимаем Deploy Web Service и ожидаем завершения процесса. Как результат - работающий сервис:
+
+![image](https://github.com/user-attachments/assets/861dd08d-4aa6-44a9-a6cf-5d1f8e65288c)
+
+8. Проверяем:
+
+![image](https://github.com/user-attachments/assets/f82877b6-2c88-4870-9266-af1d9a083e91)
+
 ## Структура базы данных (SQLite)
 
 ### Таблица `users`
