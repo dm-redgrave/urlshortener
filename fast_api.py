@@ -35,7 +35,7 @@ def get_local_ip():
     s.close()
     return ip
 
-LOCAL_DOMAIN = "127.0.0.1" #get_local_ip()
+LOCAL_DOMAIN = get_local_ip()
 print("LocalDomain:", LOCAL_DOMAIN)
 
 def generate_short_code(length=6):
