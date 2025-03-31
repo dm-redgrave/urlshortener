@@ -25,18 +25,8 @@ db = SessionLocal()
 pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
 cache = Cache(".cache")
 
-def get_local_ip():
-    s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-    try:
-        s.connect(("8.8.8.8", 80))
-        ip = s.getsockname()[0]
-    except:
-        ip = "127.0.0.1"
-    s.close()
-    return ip
-
-LOCAL_DOMAIN = get_local_ip()
-print("LocalDomain:", LOCAL_DOMAIN)
+LOCAL_DOMAIN = os.getenv("PUBLIC_DOMAIN")
+print("LOCAL_DOMAIN:", LOCAL_DOMAIN)
 
 def generate_short_code(length=6):
     letters = string.ascii_lowercase + string.digits
